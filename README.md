@@ -9,14 +9,13 @@ Installation
 ------------
 Starting with a fresh install of ExpressionEngine2
 
-1. Upload `/system/expressionengine/templates/default_site` folder to `/system/expressionengine/templates/` on your server.
-2. Upload `/assets/` folder to the root directory of your server.
-3. Upload '/htaccess.txt` file to the root directory of your server and rename to `.htaccess` with no .txt extension.
-4. Upload `/robots.txt` file to the root directory of your server.
-5. Login to your EE dashboard and go to Design>Templates>Global Preferences
-6. Change Allow Templates to be Saved as Files to "Yes"
-7. Go to the Template Manager and edit the home group.
-8. Check the box that says "Make the index template in this group your site's home page?"
+1. Upload the `assets` folder, 'templates' folder, and 'robots.txt' file to the root directory of your server.
+2. Upload '/htaccess.txt` file to the root directory of your server and rename to `.htaccess` with no .txt extension.
+3. Login to your EE dashboard and go to Design>Templates>Global Preferences
+4. Change Allow Templates to be Saved as Files to "Yes"
+5. Change the "Basepath to Template File Directory" to point to the 'templates' folder in your root.
+6. Go to the Template Manager and edit the home group.
+7. Check the box that says "Make the index template in this group your site's home page?"
 
 
 What's Included
