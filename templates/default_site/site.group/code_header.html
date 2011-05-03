@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 {!--Fixes this problem www.phpied.com/conditional-comments-block-downloads/ with the advantages of this paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ --}
-<!--[if lt IE 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" class="no-js ie6"><![endif]-->
-<!--[if IE 7 ]><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" class="no-js ie7"><![endif]-->
-<!--[if IE 8 ]><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" class="no-js ie8"><![endif]-->
-<!--[if gt IE 8 ]><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" class="no-js ie9"><![endif]-->
-<!--[if !IE]><!--><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" class="no-js"><!--<![endif]-->
+<!--[if lt IE 7 ]><html lang=en-us class="no-js ie6"><![endif]--> 
+<!--[if IE 7 ]><html lang=en-us class="no-js ie7"><![endif]--> 
+<!--[if IE 8 ]><html lang=en-us class="no-js ie8"><![endif]--> 
+<!--[if (gte IE 9)|!(IE)]><!--> <html lang=en-us class=no-js> <!--<![endif]-->
 <head>
 	<meta charset="utf-8" />
 	
@@ -13,29 +12,26 @@
 	
 	{!--Redirect IE6 to the /ie6 directory--}
 	<!--[if lt IE 7 ]>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
-		<script>
-			CFInstall.check({
-			     onmissing: function(){window.location.href = "http://"+window.location.host+"/ie6/"}
-			});
-		</script>
+	<script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+	<script>
+		CFInstall.check({
+			onmissing: function(){window.location.href = "/ie6"}
+		});
+	</script>
 	<![endif]-->
 	
+	{!-- Selectivizr - Must be at top --}
 	<!--[if lte IE 8 ]>
-		<script src="/assets/js/selectivizr.js?v=1"></script>
+		<script src="/assets/js/selectivizr-1.0.1.js?v=1"></script>
 	<![endif]-->
 	
 	<title>{site_name}{if embed:page_title} - {embed:page_title}{/if}}</title>
 	<meta name="description" content="" />
 	<meta name="author" content="" />
-
+	
 	{!--  Mobile Viewport --}
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;" />
-
-	{!-- Place favicon.ico and apple-touch-icon.png in the root of your domain and delete these references --}
-	<link rel="shortcut icon" href="/favicon.ico" />
-	<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
+	
 	{!-- CSS : implied media="all" --}
 	<link rel="stylesheet" href="/assets/css/global.css?v=1" />
 	
@@ -53,11 +49,7 @@
 	/*]]>*/
 	</script>
 	
-	
 	{!-- Modernizr (Must be at top) --}
-	<script src="/assets/js/modernizr-1.6.min.js"></script>
-	
-	
-
+	<script src="/assets/js/modernizr-1.7.min.js"></script>
 </head>
-<body>
+<body class="page-{if segment_1}{segment_1}{if:else}home{/if}">

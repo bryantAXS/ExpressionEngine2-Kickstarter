@@ -235,7 +235,6 @@ function isAjax() {
 if(isAjax()){
 	echo json_encode($returnArr);
 } else{
-	
 	header( 'location: ' . $redirectURL );
 }
 
