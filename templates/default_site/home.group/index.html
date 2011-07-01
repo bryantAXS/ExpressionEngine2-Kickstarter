@@ -1,3 +1,8 @@
-{embed="site/header" page_title="Welcome"}
+{exp:channel:entries entry_id="1"}
+{if no_results}{redirect="404"}{/if}
+{embed="site/code-header" title="{if home-title-override}{home-title-override}{if:else}{site_name} - {title}{/if}" description="{home-meta-description}" keywords="{home-meta-keywords}"}
+{embed="site/header"}
 	{!-- PUT YOUR MARKUP HERE --}
 {embed="site/footer"}
+{embed="site/code-footer"}
+{/exp:channel:entries}
