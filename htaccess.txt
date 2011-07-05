@@ -172,5 +172,5 @@ AddCharset utf-8 .html .css .js .xml .json .rss
 
 # Remove index.php from urls using the "Exclude Method"
 # http://expressionengine.com/wiki/Remove_index.php_From_URLs/#Exclude_List_Method
-RewriteCond $1 !^(assets|images|system|themes|favicon\.ico|robots\.txt|index\.php) [NC]
+RewriteCond $1 !^(assets|images|system|themes|favicon\.ico|robots\.txt|index\.php|favicon\.ico|apple-touch-icon-57x57-precomposed\.png|apple-touch-icon-72x72-precomposed\.png|apple-touch-icon-114x114-precomposed\.png) [NC]
 RewriteRule ^(.*)$ /index.php/$1 [L]  
